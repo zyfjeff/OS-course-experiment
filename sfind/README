@@ -1,0 +1,33 @@
+## 个人信息
+
+* author: 张义飞 
+* QQ: 445188383
+* Email: zyfforlinux@163.com
+
+## 安装说明
+当前目录下:
+
+    make //编译生成sfind和sfindv2两个可执行文件
+    make clean //清楚.o和可执行文件
+
+## 软件使用说明
+sfind 是早期版本，仅支持当前目录搜索
+sfindv2 改良版本，支持多级目录查找
+
+使用帮助如下:
+sfind [option]... 
+  -n|--name      acrroding to filename substr to find file                 
+  -s|--size      accroding to file size to find file(lettle and equal size)
+  -t|--type      accroding to file type to find file                       
+  -g|--gid       accroding to file git to find file                        
+  -u|--uid       accroding to file uid to find file                        
+  -h|--help      get help                                                  
+  -V|--version   print sfind version
+
+## 使用注意事项
+仅支持 --name --size ...和 -n -s....这样的选项
+对于-name这样的选项会识别成 -n 后面加上 ame参数
+
+
+## 声明
+仅供学习参考，如有bug,可以联系我修复。
