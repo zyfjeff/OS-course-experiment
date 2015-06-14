@@ -80,13 +80,11 @@ bool build_and_send_singlefile(int fd,char *filename) //发送单个文件
        FILE *fp = fopen(filename,"r+");
        while((ret = fread(buf,1,sizeof(buf),fp)) > 0) {
             build_and_senddata(fd,filename,buf,ret);
-            if(feof(fp)){
-                break;
-            } else {
+       }
+       if(!feof(fp)){
                 printf("fread error\n"); 
                 fclose(fp);
                 return false;
-            }
        }
        build_and_sendeof(fd,filename);
        fclose(fp);
